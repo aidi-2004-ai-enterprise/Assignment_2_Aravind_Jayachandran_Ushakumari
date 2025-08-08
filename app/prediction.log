@@ -1,0 +1,41 @@
+2025-08-07 12:52:29,405 - INFO - Loading model and encoder...
+2025-08-07 12:52:29,406 - INFO - GOOGLE_APPLICATION_CREDENTIALS=dummy
+2025-08-07 12:52:29,406 - INFO - GCS_BUCKET_NAME=dummy-bucket
+2025-08-07 12:52:29,406 - INFO - GCS_MODEL_BLOB_NAME=model.json
+2025-08-07 12:52:29,406 - INFO - GCS_ENCODER_BLOB_NAME=encoder_info.pkl
+2025-08-07 12:52:29,406 - INFO - Downloading model from GCS...
+2025-08-07 12:52:29,422 - ERROR - Failed to download model.json from dummy-bucket: File dummy was not found.
+2025-08-07 12:52:29,422 - WARNING - Model not loaded at import (okay if starting with Uvicorn): File dummy was not found.
+2025-08-07 12:52:29,492 - INFO - Loading model and encoder...
+2025-08-07 12:52:29,493 - INFO - GOOGLE_APPLICATION_CREDENTIALS=dummy
+2025-08-07 12:52:29,493 - INFO - GCS_BUCKET_NAME=dummy-bucket
+2025-08-07 12:52:29,493 - INFO - GCS_MODEL_BLOB_NAME=model.json
+2025-08-07 12:52:29,493 - INFO - GCS_ENCODER_BLOB_NAME=encoder_info.pkl
+2025-08-07 12:52:29,494 - INFO - Downloading model from GCS...
+2025-08-07 12:52:29,494 - INFO - Downloading encoder info from GCS...
+2025-08-07 12:52:29,494 - INFO - Loading model from file...
+2025-08-07 12:52:30,614 - INFO - Loading encoder info from file...
+2025-08-07 12:52:30,642 - INFO - Model loaded: XGBClassifier(base_score='5E-1', booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None,
+              feature_types=['float', 'float', 'float', 'float', 'i', 'i', 'i',
+                             'i', 'i'],
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=None, num_parallel_tree=None, ...)
+2025-08-07 12:52:30,642 - INFO - Label encoder loaded: LabelEncoder()
+2025-08-07 12:52:30,642 - INFO - Encoder info: {'sex': ['Male', 'Female'], 'island': ['Torgersen', 'Biscoe', 'Dream']}
+2025-08-07 12:52:30,664 - INFO - Encoding input features
+2025-08-07 12:52:30,682 - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2025-08-07 12:52:30,691 - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-08-07 12:52:30,698 - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-08-07 12:52:30,707 - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-08-07 12:52:30,717 - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-08-07 12:52:30,725 - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 422 Unprocessable Entity"
+2025-08-07 12:52:30,733 - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2025-08-07 22:53:29,504 - INFO - Loading local model and encoder—skipping GCS
